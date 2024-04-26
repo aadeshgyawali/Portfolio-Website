@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="home" content="home page" />
+    <title>contact</title>
+ 
+    <link rel="stylesheet" href="CSS.css">
+
+  </head>
+
+ <!--background image-->
+  <body style="background-image: url('pic/wp4676582.jpg');">
+    <!-- nav bar-->
+  <div id="body">
+    <div class="navbar">
+        <a href="HOME.html">Home</a>
+        <a  href="BLOG.html">Blog</a>
+        <a  href="RESEARCH.html">Research</a>
+        <a  href="CV.html">CV</a>
+        <a class="current" href="CONTACT.html">Contact</a>
+      </div>
+      <div align="center">
+        <!-- form built with css Valifateform() fuction called -->
+      <form name="SubmitForm" onsubmit="Validateform()">
+        <div align="center"><i><h1 style="color: aliceblue;"> Contact us</h1> </i></div>
+        <br>
+        <p style="text-align: center;"><h4 style="color: aliceblue; font-size: large;">First Name: <input name="firstname" type="text"></h4><p></p><br>
+        <p style="text-align: center;"><h4 style="color: aliceblue;font-size: large;">Last Name: <input name="lastname" type="text"></h4><p></p><br>
+        <p style="text-align: center;"><h4 style="color: aliceblue;font-size: large;">Gender: 
+            <input name="gender" type="radio" checked="" value="male">Male
+            <input name="gender" type="radio" value="female">Female
+               </h4>
+            <p></p><br>
+         
+            <p><h4 style="color: aliceblue; font-size: large;">Message: <textarea name="Message" placeholder="Enter Message">Enter Message</textarea> </h4>
+           <p></p>
+           <br>
+           <div align="center">
+           <p>
+             <input name="Submit" id="submitbutton" type="submit" value="Submit">
+           </p>
+           
+    
+           </div>
+    
+      </form>
+      </div>
+     
+      <!-- fotter section-->
+  <div id="footer">
+    
+      <p style="font-size: 30px; color: wheat;">Find me on social media.</p>
+      <div id="social">
+          <a href="https://www.facebook.com/aadesh.gyawali"><img src="Pic/fb.png" style="width: 30px;height:30px;"></a>
+          <a href="https://www.instagram.com/aadesh_gyawali"><img src="Pic/ig.png" style="width: 30px;height:30px;"></a></div>
+     
+        <p id="copy" style="font-style: italic;font-size: 15px;">Copyright 2021.All rights reserved.</p><span style="color: #03fcb1">Aadesh Gyawali</span>
+    
+  </div>
+  <!-- Java Script  -->
+  <script>
+    function Validateform()
+    {
+      var fname=document.forms["SubmitForm"]["firstname"].value;
+      var lname=document.forms["SubmitForm"]["lastname"].value;
+      var Message=document.forms["SubmitForm"]["Message"].value;
+      if(fname=="" && lname=="" && Message=="")
+      {
+        alert("Please fill up the form ")
+      }
+      else if(fname=="")
+       {
+        alert("First Name is Empty");
+       }
+      else if (lname=="")
+       {
+         alert("Last Name is Empty");
+
+       }
+      
+      else if(Message=="")
+      {
+        alert("Message Field is Blank")
+      } 
+      else
+      {
+        alert("Thanks you. Have a Good Day!")
+      }
+
+
+    }
+ </script>
+  </body>
+</html>
